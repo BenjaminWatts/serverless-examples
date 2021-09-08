@@ -1,5 +1,5 @@
 
-service: apollo
+service: apollo-api
 frameworkVersion: "2"
 configValidationMode: error
 provider:
