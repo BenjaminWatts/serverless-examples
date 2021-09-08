@@ -1,0 +1,15 @@
+{
+  "name": "apollo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Watts",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-lambda": "^3.3.0",
+    "graphql": "^15.5.3"
+  }
+}

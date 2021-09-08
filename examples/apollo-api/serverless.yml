@@ -1,0 +1,21 @@
+
+service: apollo
+frameworkVersion: "2"
+configValidationMode: error
+provider:
+  name: aws
+  lambdaHashingVersion: 20201221
+  stage: dev
+
+functions:
+  apolloFunc:
+    handler: src/graphql.graphqlHandler
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true
+      - http:
+          path: /
+          method: get
+          cors: true
