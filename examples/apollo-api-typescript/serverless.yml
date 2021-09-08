@@ -1,0 +1,25 @@
+
+service: apollo-api-typescript
+frameworkVersion: "2"
+configValidationMode: error
+provider:
+  name: aws
+  lambdaHashingVersion: 20201221
+  stage: dev
+  runtime: nodejs14.x
+
+functions:
+  apolloFunc:
+    handler: src/graphql.graphqlHandler
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true
+      - http:
+          path: /
+          method: get
+          cors: true
+
+plugins:
+    - serverless-plugin-typescript
