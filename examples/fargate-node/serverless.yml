@@ -1,0 +1,18 @@
+
+service: fargateNode
+frameworkVersion: "2"
+configValidationMode: error
+provider:
+  name: aws
+  lambdaHashingVersion: 20201221
+  stage: dev
+  ecr:
+    images:
+      fargate-node-image:
+        path: "./"
+
+functions:
+  fargateNode:
+    image: fargate-node-image
+    events:
+      - schedule: cron(0 09 * * ? *)

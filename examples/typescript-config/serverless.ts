@@ -8,7 +8,7 @@ const serverlessConfiguration: Serverless = {
         stage: 'dev',
         runtime: 'nodejs14.x',
     },
-    service: 'users',
+    service: 'typescript-config',
     functions: {
         usersCreate: {
             handler: 'src/handler.hello',
